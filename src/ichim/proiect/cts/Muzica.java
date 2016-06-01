@@ -16,4 +16,9 @@ public class Muzica extends Produs{
 		super(denumire, pret);
 	}
 
+	@Override
+	public String detaliiProdus() {
+		return "Carte: "+this.denumire+", pret: "+this.pret+", album: "+this.album;
+	}
+
 }

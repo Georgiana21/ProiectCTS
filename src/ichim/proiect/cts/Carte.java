@@ -16,4 +16,9 @@ public class Carte extends Produs{
 		super(denumire, pret);
 	}
 
+	@Override
+	public String detaliiProdus() {
+		return "Carte: "+this.denumire+", pret: "+this.pret+", gen: "+this.gen;
+	}
+
 }

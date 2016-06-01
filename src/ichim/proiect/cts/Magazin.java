@@ -1,5 +1,6 @@
 package ichim.proiect.cts;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class Magazin {
 		listaPlati.remove(metodaPlata);
 	}
 	
-	public void finalizareComanda(Client client, MetodaPlata metodaPlata){
+	public void finalizareComanda(Client client, MetodaPlata metodaPlata) throws FileNotFoundException{
 		client.achita();
 		this.incaseazaPlata(metodaPlata);
 		client.getComanda().salvareComanda();

@@ -75,7 +75,7 @@ public class Client {
 		this.comanda = comanda;
 	}
 
-	public void achita(){
-		
+	public MetodaPlata achita(){
+		return metodaPlata;
 	}
 }
