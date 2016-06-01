@@ -1,6 +1,8 @@
 package ichim.proiect.cts;
 
 public abstract class Produs {
+	
+	public static double TVA=0.24;
 
 	String denumire;
 	double pret;
@@ -29,7 +31,7 @@ public abstract class Produs {
 	}
 	
 	public double pretFinal(){
-		return pret*1.24;
+		return pret*(1+TVA);
 	}
 	
 	public abstract String detaliiProdus();
