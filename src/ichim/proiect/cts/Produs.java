@@ -27,4 +27,6 @@ public abstract class Produs {
 	public double pretFinal(){
 		return pret*1.24;
 	}
+	
+	public abstract String detaliiProdus();
 }

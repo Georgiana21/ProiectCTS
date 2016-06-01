@@ -16,4 +16,9 @@ public class Film extends Produs{
 		super(denumire, pret);
 	}
 
+	@Override
+	public String detaliiProdus() {
+		return "Film: "+this.denumire+", pret: "+this.pret+", durata: "+this.durata;
+	}
+
 }
