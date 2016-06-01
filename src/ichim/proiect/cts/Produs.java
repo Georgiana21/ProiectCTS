@@ -21,7 +21,9 @@ public abstract class Produs {
 	public double getPret() {
 		return pret;
 	}
-	public void setPret(double pret) {
+	public void setPret(double pret) throws ExceptiePret {
+		if(pret==0 || pret>1000 || pret<=0)
+			throw new ExceptiePret("Pretul trebuie sa fie in intervalul 0-1000");
 		this.pret = pret;
 	}
 	public Produs(String denumire, double pret) {
