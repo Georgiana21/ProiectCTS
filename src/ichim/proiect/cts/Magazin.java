@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Magazin {
 	
+	public static String MESAJ_PRODUS_INEXISTENT="Nu exista acest tip de produse!";
+	
 	private static Magazin instantaMagazin;
 
 	private List<MetodaPlata> listaPlati=new ArrayList<MetodaPlata>();
@@ -39,7 +41,7 @@ public class Magazin {
 			produs=new Muzica(denumire,pret);
 			break;
 		default:
-			throw new ExceptieProdusInexistent("Nu exista acest tip de produse!");
+			throw new ExceptieProdusInexistent(MESAJ_PRODUS_INEXISTENT);
 		}
 		return produs;
 	}

@@ -2,14 +2,16 @@ package ichim.proiect.cts;
 
 public class ComandaAchitata extends StareComanda{
 
+	public static String MESAJ_ACHITATA="Comanda a fost achitata!";
+	
 	@Override
 	public void detaliiStare() {
-		System.out.println("Comanda a fost achitata!");
+		System.out.println(MESAJ_ACHITATA);
 	}
 
 	@Override
 	public String getStare() {
-		return "Comanda a fost achitata!";
+		return MESAJ_ACHITATA;
 	}
 
 }

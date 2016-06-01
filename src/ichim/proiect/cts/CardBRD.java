@@ -2,6 +2,8 @@ package ichim.proiect.cts;
 
 public class CardBRD extends MetodaPlata{
 
+	public static String MESAJ_PLATA="Plata cu cardul BRD";
+	
 	private PlataBRD plataBRD;
 	
 	public CardBRD(PlataBRD plataBRD){
@@ -10,7 +12,7 @@ public class CardBRD extends MetodaPlata{
 	
 	public void plata() throws ExceptiePINInvalid{
 		super.plata();
-		System.out.println("Plata cu cardul BRD");
+		System.out.println(MESAJ_PLATA);
 		plataBRD.plateste();
 	}
 

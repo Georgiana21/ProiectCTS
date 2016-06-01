@@ -1,6 +1,9 @@
 package ichim.proiect.cts;
 
 public class ProdusAmbalatSimplu extends ProdusAmbalat{
+	
+	public static double PRET_AMBALAJ=2;
+	public static String MESAJ_AMBALAT=", ambalat simplu";
 
 	public ProdusAmbalatSimplu(Produs produs) {
 		super(produs);
@@ -12,6 +15,6 @@ public class ProdusAmbalatSimplu extends ProdusAmbalat{
 
 	@Override
 	public String detaliiProdus() {
-		return produsDecorat.detaliiProdus()+", ambalat simplu";
+		return produsDecorat.detaliiProdus()+MESAJ_AMBALAT;
 	}
 }

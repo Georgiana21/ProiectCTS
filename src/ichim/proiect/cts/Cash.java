@@ -1,6 +1,8 @@
 package ichim.proiect.cts;
 
 public class Cash extends MetodaPlata{
+	
+	public static String MESAJ_PLATA="Plata cash";
 
 	private PlataCash plataCash;
 	
@@ -18,7 +20,7 @@ public class Cash extends MetodaPlata{
 
 	public void plata() throws ExceptiePINInvalid{
 		super.plata();
-		System.out.println("Plata cash");
+		System.out.println(MESAJ_PLATA);
 		plataCash.plateste();
 	}
 }
