@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Comanda {
+	
+	public static String MESAJ_FINALIZARE_PLATA="Plata a fost efectuata";
 
 	private String denumire;
 	private StareComanda stareComanda;
@@ -48,7 +50,7 @@ public class Comanda {
 	}
 	
 	public void notificarePlata(){
-		System.out.println("Plata a fost efectuata");
+		System.out.println(MESAJ_FINALIZARE_PLATA);
 		stareComanda=new ComandaAchitata();
 	}
 	
