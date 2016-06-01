@@ -1,6 +1,6 @@
 package ichim.proiect.cts;
 
-public class Produs {
+public abstract class Produs {
 
 	String denumire;
 	double pret;
@@ -24,5 +24,7 @@ public class Produs {
 		this.pret = pret;
 	}
 	
-	
+	public double pretFinal(){
+		return pret*1.24;
+	}
 }
