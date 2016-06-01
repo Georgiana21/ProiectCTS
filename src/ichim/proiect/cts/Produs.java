@@ -5,6 +5,10 @@ public abstract class Produs {
 	String denumire;
 	double pret;
 	
+	public Produs(){
+		
+	}
+	
 	public String getDenumire() {
 		return denumire;
 	}

@@ -44,19 +44,19 @@ public class Magazin {
 		return produs;
 	}
 	
-	public void inregistreazaPlata(){
+	public void inregistreazaPlata() throws ExceptiePINInvalid{
 		MetodaPlata metodaPlata=listaPlati.get(0);
 		metodaPlata.plata();
 		listaPlati.remove(metodaPlata);
 	}
 	
-	public void finalizareComanda(Client client, MetodaPlata metodaPlata) throws FileNotFoundException{
+	public void finalizareComanda(Client client, MetodaPlata metodaPlata) throws FileNotFoundException, ExceptiePINInvalid{
 		client.achita();
 		this.incaseazaPlata(metodaPlata);
 		client.getComanda().salvareComanda();
 	}
 	
-	public void incaseazaPlata(MetodaPlata metodaPlata){
+	public void incaseazaPlata(MetodaPlata metodaPlata) throws ExceptiePINInvalid{
 		metodaPlata.plata();
 	}
 }

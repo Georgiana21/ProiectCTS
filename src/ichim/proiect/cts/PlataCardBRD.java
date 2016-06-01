@@ -1,6 +1,6 @@
 package ichim.proiect.cts;
 
-public class PlataCardBRD {
+public class PlataCardBRD extends PlataBRD{
 
 	private String PIN;
 	

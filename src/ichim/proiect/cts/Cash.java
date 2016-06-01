@@ -4,6 +4,10 @@ public class Cash extends MetodaPlata{
 
 	private PlataCash plataCash;
 	
+	public Cash(PlataCash plataCash){
+		this.plataCash=plataCash;
+	}
+	
 	public PlataCash getPlataCash() {
 		return plataCash;
 	}
@@ -12,7 +16,7 @@ public class Cash extends MetodaPlata{
 		this.plataCash = plataCash;
 	}
 
-	public void plata(){
+	public void plata() throws ExceptiePINInvalid{
 		super.plata();
 		System.out.println("Plata cash");
 		plataCash.plateste();

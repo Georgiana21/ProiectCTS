@@ -1,6 +1,6 @@
 package ichim.proiect.cts;
 
-public class PlataCardBRDSigura {
+public class PlataCardBRDSigura extends PlataBRD{
 
 	private PlataBRD plataBRD;
 	
