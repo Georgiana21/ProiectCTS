@@ -49,7 +49,7 @@ public class Comanda {
 	
 	public void notificarePlata(){
 		System.out.println("Plata a fost efectuata");
-		stareComanda=new ComandaNeachitata();
+		stareComanda=new ComandaAchitata();
 	}
 	
 	public double calculSumaDePlata(){

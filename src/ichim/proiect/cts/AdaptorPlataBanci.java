@@ -8,7 +8,7 @@ public class AdaptorPlataBanci extends PlataCardBCR{
 		this.plataBRD=plataBRD;
 	}
 	
-	public void efectueazaPlata(){
+	public void efectueazaPlata() throws ExceptiePINInvalid{
 		plataBRD.plateste();
 		System.out.print(" utilizand adaptor BCR");
 	}

@@ -1,8 +1,7 @@
 package ichim.proiect.cts;
 
-public class PlataBRD {
+public abstract class PlataBRD {
 
-	public void plateste(){
-		
-	}
+	public abstract void plateste() throws ExceptiePINInvalid;
+	
 }

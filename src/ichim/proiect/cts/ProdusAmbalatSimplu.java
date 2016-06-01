@@ -9,4 +9,9 @@ public class ProdusAmbalatSimplu extends ProdusAmbalat{
 	public double pretFinal(){
 		return produsDecorat.pretFinal()+2;
 	}
+
+	@Override
+	public String detaliiProdus() {
+		return produsDecorat.detaliiProdus()+", ambalat simplu";
+	}
 }

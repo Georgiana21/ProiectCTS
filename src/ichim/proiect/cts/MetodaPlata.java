@@ -7,7 +7,7 @@ public abstract class MetodaPlata {
 
 	private List<Comanda> colectieComenzi=new ArrayList<Comanda>();
 	
-	public void plata(){
+	public void plata() throws ExceptiePINInvalid{
 		notificareComenzi();
 	}
 	

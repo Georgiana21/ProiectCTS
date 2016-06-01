@@ -5,6 +5,7 @@ public class ClientBuilder {
 	private Client client;
 	
 	public ClientBuilder(String nume){
+		this.client=new Client();
 		this.client.setNume(nume);
 	}
 	
