@@ -1,0 +1,1 @@
+Comanda a fost achitata!Carte: Idiotul, pret: 40.0, gen: nullFilm: Avatar, pret: 100.0, durata: 0Carte: Californication, pret: 15.0, album: null

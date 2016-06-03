@@ -1,5 +1,8 @@
 package ichim.proiect.cts;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Client {
 	
 	private String nume;
@@ -45,8 +48,9 @@ public class Client {
 	}
 
 	public void setEmail(String email) throws ExceptieEmail {
-		String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-		if(!email.contains(ePattern))
+		Pattern pattern =Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+        Matcher matcher = pattern.matcher(email);
+        if(!matcher.matches())
 			throw new ExceptieEmail("Email invalid");
 		this.email = email;
 	}
