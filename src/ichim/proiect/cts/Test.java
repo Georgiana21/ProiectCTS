@@ -69,6 +69,9 @@ public class Test {
 		} catch (ExceptiePINInvalid e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (ExceptieEmail e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}

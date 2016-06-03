@@ -8,6 +8,7 @@ import java.util.List;
 public class Comanda {
 	
 	public static String MESAJ_FINALIZARE_PLATA="Plata a fost efectuata";
+	public static int NUMAR_CARACTERE_DENUMIRE=3;
 
 	private String denumire;
 	private StareComanda stareComanda;
@@ -38,7 +39,10 @@ public class Comanda {
 		return denumire;
 	}
 
-	public void setDenumire(String denumire) {
+	public void setDenumire(String denumire) throws ExceptieDenumireIncorecta {
+		if(denumire==null || (denumire!=null && denumire.length()<NUMAR_CARACTERE_DENUMIRE))
+			throw new ExceptieDenumireIncorecta(
+					"Denumirea trebuie sa aiba cel putin "+NUMAR_CARACTERE_DENUMIRE+" caractere");
 		this.denumire = denumire;
 	}
 
@@ -58,7 +62,7 @@ public class Comanda {
 		double suma=0;
 		for(Produs produs : listaProduse)
 			suma+=produs.pretFinal();
-		return suma;
+		return Math.round(suma*100)/100.00;
 	}
 	
 	public void detaliiComanda(){
