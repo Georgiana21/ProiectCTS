@@ -33,7 +33,7 @@ public abstract class Produs {
 	}
 	
 	public double pretFinal(){
-		return pret*(1+TVA)<1000?pret*(1+TVA):1000;
+		return getPret()*(1+TVA)<1000?getPret()*(1+TVA):1000;
 	}
 	
 	public abstract String detaliiProdus();

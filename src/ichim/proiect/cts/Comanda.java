@@ -51,6 +51,7 @@ public class Comanda {
 		writer.write(stareComanda.getStare());
 		for(Produs produs : listaProduse)
 			writer.write(produs.detaliiProdus());
+		writer.close();
 	}
 	
 	public void notificarePlata(){
