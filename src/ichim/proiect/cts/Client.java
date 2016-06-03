@@ -23,7 +23,9 @@ public class Client {
 		return varsta;
 	}
 
-	public void setVarsta(int varsta) {
+	public void setVarsta(int varsta) throws ExceptieVarsta {
+		if(varsta<14 || varsta>100)
+			throw new ExceptieVarsta("Varsta trebuie sa fie in intervalul 14-100");
 		this.varsta = varsta;
 	}
 
@@ -31,7 +33,10 @@ public class Client {
 		return telefon;
 	}
 
-	public void setTelefon(String telefon) {
+	public void setTelefon(String telefon) throws ExceptieTelefon {
+		if(telefon==null||
+				(telefon!=null && (telefon.length()!=10 || !telefon.matches("[0-9]+"))))
+			throw new ExceptieTelefon("Trebuie sa fie doar caractere numerice");
 		this.telefon = telefon;
 	}
 
@@ -39,7 +44,10 @@ public class Client {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(String email) throws ExceptieEmail {
+		String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+		if(!email.contains(ePattern))
+			throw new ExceptieEmail("Email invalid");
 		this.email = email;
 	}
 
@@ -55,7 +63,10 @@ public class Client {
 		return adresa;
 	}
 
-	public void setAdresa(String adresa) {
+	public void setAdresa(String adresa) throws ExceptieDenumireIncorecta {
+		if(adresa==null ||
+				(adresa!=null && adresa.length()<10))
+			throw new ExceptieDenumireIncorecta("Trebuie sa aiba macar 10 caractere!");
 		this.adresa = adresa;
 	}
 

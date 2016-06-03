@@ -30,6 +30,8 @@ public class Magazin {
 	
 	public Produs getProdus(TipProdus tip, String denumire,double pret) throws ExceptieProdusInexistent{
 		Produs produs=null;
+		if(tip==null)
+			throw new ExceptieProdusInexistent(MESAJ_PRODUS_INEXISTENT);
 		switch(tip){
 		case FILM:
 			produs=new Film(denumire,pret);
